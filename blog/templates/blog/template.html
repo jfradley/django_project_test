@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Template page!</h1>
+
+    <form method="POST" action="template">
+        {% csrf_token %}
+        <input type="text" name="textfield">
+        ...
+        <button type="submit">SubmitText</button>
+    </form>
+    <h2>Test H2 {{ txt }}</h2>
+{% endblock content %}
