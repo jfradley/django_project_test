@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="POST" action="DocCapture">
+        {% csrf_token %}
+        <p>Chapters
+        <input type="number" name="no_chapters" placeholder="N.o. chapters">
+        <button class="btn btn-outline-info" type="submit">Submit</button></p>
+
+        {% for field in form %}
+            {% if field.label != 'desc' %}
+                <h5>{{ field.label }}: Title{{ field }}
+                </h5>
+            {% else %}
+                <h5>{{ field.label }}</h5>
+                <h5>{{ field }}</h5>
+            {% endif %}
+
+        {% endfor %}
+
+    </form>
+{% endblock content %}

@@ -12,7 +12,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
@@ -34,6 +35,8 @@
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
                 <a class="nav-item nav-link" href="{% url 'blog-template' %}">template</a>
+                <a class="nav-item nav-link" href="{% url 'IdeaCapture' %}">Idea Capture</a>
+                <a class="nav-item nav-link" href="{% url 'DocCapture' %}">DocCapture</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">

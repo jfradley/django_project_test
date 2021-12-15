@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Left</button>
+        <a type="button" class="btn btn-secondary" href="{% url 'DocCapture' %}">DocCapture</a>
+    </div>
+    <form method="POST" action="IdeaCapture">
+        {% for field in form %}
+            {% csrf_token %}
+
+            <h5>{{ field.label }}
+            <a class="fa fa-info-circle" style="font-size:12px" href="#" data-toggle="tooltip" data-placement="right" title="{{field.help_text}}"></a>
+
+            </h5>
+            <h5>{{ field }}</h5>
+        {% endfor %}
+        <button class="btn btn-outline-info" type="submit">Download</button>
+    </form>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+    </script>
+    <div>
+        <a  data-toggle="popover" title="Popover Header"  data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Toggle popover
+        </a>
+    </div>
+{% endblock content %}
+

@@ -16,7 +16,9 @@ urlpatterns = [
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('about', views.about, name='blog-about'),
-    path('template', views.template, name='blog-template')
+    path('template', views.template, name='blog-template'),
+    path('IdeaCapture', views.idea_capture_form, name='IdeaCapture'),
+    path('DocCapture', views.doc_capture, name='DocCapture')
 ]
 
 
